@@ -1,0 +1,78 @@
+.productsgrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+    justify-items: center;
+}
+.singleproduct{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+.griddetail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.salary {
+    color: green;
+    font-size: large;
+}
+.griddetail .age {
+    color: #ccc;
+}
+
+.singleproduct:hover {
+    transform-style: preserve-3d;
+    transform: scale(1.02);
+    transition: all ease 0.3s;
+    cursor: pointer;
+    opacity: 0.9;
+    overflow: hidden;
+}
+.singleproduct:hover > .active{
+    opacity: .7;
+    animation: goup 1s ease;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .active{
+      background-color: greenyellow;
+      position: absolute;
+      top: 0px;
+      transition: all ease 1s;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+  }
+  .addbutton{
+    border-radius: 2px;
+    padding: 5px 10px;
+    background-color: #fff;
+    width: auto;
+    font-size: x-large;
+    margin-top: 45%;
+    cursor: pointer;
+  }
+  @keyframes goup {
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
