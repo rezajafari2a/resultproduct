@@ -67,6 +67,7 @@ table {
     font-size: x-large;
     margin-top: 45%;
     cursor: pointer;
+    border: none;
   }
   @keyframes goup {
     0%{
