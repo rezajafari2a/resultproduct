@@ -7,7 +7,7 @@ function SingleProduct(props) {
         <div className="singleproduct">
             <div className="wrappname">
                 <img src='/assets/img/cherry.JPG' />
-                <div className="active">
+                <div className={active == -1 ? "active active1":"active active3"}>
                 </div>
                 {
                     active == -1 ?
