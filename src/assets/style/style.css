@@ -55,7 +55,7 @@
     opacity: .7;
     animation: goup 1s ease;
 }
-.wrappname:hover > .addbutton{
+.wrappname:hover > .btn{
     opacity: 1;
 }
 
@@ -106,4 +106,20 @@ table {
     100%{
         top: 0%;
     }
+}
+
+
+.Removebutton{
+    border-radius: 2px;
+    padding: 5px 10px;
+    background-color: #fff;
+    width: auto;
+    font-size: x-large;
+    cursor: pointer;
+    opacity: 0;
+    right: 30%;
+    top: 20%;
+    position: absolute;
+    border: 4px solid #fff;
+    color: rgb(127, 220, 199);;
 }

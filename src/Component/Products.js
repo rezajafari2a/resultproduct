@@ -14,9 +14,24 @@ function Products() {
         dispatch(fetchItems())
     }, [])
     const [compareList, setcompareList] = useState([])
+    const [listid, setlistid] = useState([])
 
     const addTocomparelist = (newrecord) => {
-        setcompareList([...compareList, newrecord])
+        if (listid.indexOf(newrecord.id) === -1) {
+            setlistid([...listid, newrecord.id])
+            setcompareList([...compareList, newrecord])
+            alert("done")
+        }
+        else {
+            alert("it's been Added")
+        }
+    }
+    const removeFromList = (id) => {
+        const mylist = listid.indexOf(id);
+        if (mylist > -1) {
+            const newdata=listid.splice(mylist, 1);
+            setlistid([newdata])
+        }
     }
 
     return (
@@ -27,7 +42,11 @@ function Products() {
                         !error ?
 
                             listproduct.length > 0 && listproduct.map(singleitem =>
-                                <SingleProduct key={singleitem.id} item={singleitem} addtolist={addTocomparelist} />
+                                <SingleProduct key={singleitem.id}
+                                    item={singleitem} addtolist={addTocomparelist}
+                                    active={listid.indexOf(singleitem.id)}
+                                    removeFromList={removeFromList}
+                                />
                             ) : error : "Loading..."
                 }
             </div>
