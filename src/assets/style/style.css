@@ -11,6 +11,22 @@
     text-align: center;
     position: relative;
 }
+@media only screen and (max-width: 600px) {
+    .productsgrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        justify-items: center;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .productsgrid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 5px;
+        justify-items: center;
+    }
+}
 .griddetail{
     display: grid;
     grid-template-columns: 1fr 1fr;
