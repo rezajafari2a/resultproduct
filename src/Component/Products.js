@@ -30,7 +30,12 @@ function Products() {
         const mylist = listid.indexOf(id);
         if (mylist > -1) {
             const newdata=listid.splice(mylist, 1);
+            const newdata_comparelist=compareList.splice(mylist, 1);
+            setcompareList([ newdata_comparelist])
             setlistid([newdata])
+            alert("Removed")
+        }else{
+            alert('Not exist')
         }
     }
 
