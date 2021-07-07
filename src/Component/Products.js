@@ -17,8 +17,6 @@ function Products() {
 
     const addTocomparelist = (newrecord) => {
         setcompareList([...compareList, newrecord])
-        console.log(compareList, 'rj')
-        console.log(newrecord, 'newrecord')
     }
 
     return (

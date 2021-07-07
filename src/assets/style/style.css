@@ -38,7 +38,10 @@
 .griddetail .age {
     color: #ccc;
 }
-
+.wrappname{
+    position: relative;
+    padding: 0px;
+}
 .singleproduct:hover {
     transform-style: preserve-3d;
     transform: scale(1.02);
@@ -47,9 +50,13 @@
     opacity: 0.9;
     overflow: hidden;
 }
-.singleproduct:hover > .active{
+.wrappname:hover > .active{
     opacity: .7;
     animation: goup 1s ease;
+    overflow: hidden;
+}
+.wrappname:hover > .addbutton{
+    opacity: 1;
 }
 
 table {
@@ -67,7 +74,7 @@ table {
     background-color: #dddddd;
   }
   .active{
-      background-color: greenyellow;
+      background-color: rgb(127, 220, 199);
       position: absolute;
       top: 0px;
       transition: all ease 1s;
@@ -78,12 +85,19 @@ table {
   .addbutton{
     border-radius: 2px;
     padding: 5px 10px;
-    background-color: #fff;
+    background-color: transparent;
     width: auto;
     font-size: x-large;
-    margin-top: 45%;
     cursor: pointer;
-    border: none;
+    opacity: 0;
+    right: 30%;
+    top: 20%;
+    position: absolute;
+    border: 4px solid #fff;
+    color: #fff;
+  }
+  .active2{
+      opacity: 0;
   }
   @keyframes goup {
     0%{
