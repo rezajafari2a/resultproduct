@@ -41,6 +41,7 @@
 .wrappname{
     position: relative;
     padding: 0px;
+    overflow: hidden;
 }
 .singleproduct:hover {
     transform-style: preserve-3d;
@@ -53,7 +54,6 @@
 .wrappname:hover > .active{
     opacity: .7;
     animation: goup 1s ease;
-    overflow: hidden;
 }
 .wrappname:hover > .addbutton{
     opacity: 1;
